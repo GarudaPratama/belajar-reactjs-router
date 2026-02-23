@@ -1,4 +1,5 @@
-import {Link, Outlet} from "react-router-dom";
+import {NavLink, Outlet} from "react-router-dom";
+import "./data.css"
 
 export default function DataLayout() {
   return (
@@ -7,19 +8,23 @@ export default function DataLayout() {
 
       <ul>
         <li>
-          <Link to="/data">Data</Link>
+          <NavLink to="/data">Data</NavLink>
         </li>
 
         <li>
-          <Link to="/data/products">Products</Link>
+          <NavLink to="/data/customers">Customers</NavLink>
         </li>
 
         <li>
-          <Link to="/data/customers">Customers</Link>
+          <NavLink to={{
+            pathname: "/data/products",
+            search: "?category=shoes",
+            hash: "#top"
+          }}>Products</NavLink>
         </li>
 
         <li>
-          <Link to="/data/sellers">Sellers</Link>
+          <NavLink to="/data/sellers">Sellers</NavLink>
         </li>
       </ul>
 

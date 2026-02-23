@@ -1,8 +1,20 @@
+import {useNavigate} from "react-router";
+
 export default function Home() {
-    return (
-        <div>
-            <h1>Home</h1>
-            <p>Welcome to the home page!</p>
-        </div>
-    )
+
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate({
+      pathname: "/data",
+    });
+  }
+
+  return (
+    <div>
+      <h1>Home</h1>
+      <p>Welcome to the home page!</p>
+      <button onClick={handleClick}>Go to Data</button>
+    </div>
+  );
 }

@@ -13,6 +13,7 @@ import Product from "./data/Products.jsx";
 import ProductDetail from "./ProductDetail.jsx";
 import Customer from "./data/Customers.jsx";
 import Seller from "./data/Sellers.jsx";
+import ProductSearch from './ProductSearch.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -30,6 +31,7 @@ createRoot(document.getElementById('root')).render(
 
             <Route index element={<Data/>}/>
             <Route path="products" element={<Product/>}/>
+            <Route path="products/search" element={<ProductSearch/>}/>
 
             
             <Route path="products/:id" element={<ProductDetail/>}/>
