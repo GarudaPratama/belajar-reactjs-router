@@ -7,8 +7,8 @@ export default function ProductDetail() {
 
     return (
         <>
-            <h1>Product Details {params.id}</h1>
-            <p>Product detail page</p>
+            <h1>Product Details {params.userId}</h1>
+            <p>Product detail page {params.addresId}</p>
         </>
     )
 }
